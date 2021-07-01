@@ -1,3 +1,15 @@
+
+var firebaseConfig = {
+    apiKey: "AIzaSyCmK_J5yOy2ZPHbeCzOzczziTNiy-2-Eos",
+    authDomain: "newagent-f9mv.firebaseapp.com",
+    projectId: "newagent-f9mv",
+    storageBucket: "newagent-f9mv.appspot.com",
+    messagingSenderId: "337439444645",
+    appId: "1:337439444645:web:f2792cf00140ab7c9c474c"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
 const auth = firebase.auth()
 
 const noLogged = document.getElementById('noLogged')
@@ -8,13 +20,8 @@ const userDetails = document.getElementById('userDetails')
 
 const provider = new firebase.auth.GoogleAuthProvider()
 
-singInButton.onclick = () => {
-    try {
-        auth.signInWithPopup(provider)
-    } catch (error) {
-        console.log(error)
-    }
-}
+singInButton.onclick = () => auth.signInWithPopup(provider)
+    
 
 singOutButton.onclick = () => {
     try {
