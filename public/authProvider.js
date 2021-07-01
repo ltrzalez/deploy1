@@ -8,6 +8,19 @@ const userDetails = document.getElementById('userDetails')
 
 const provider = new firebase.auth.GoogleAuthprovider()
 
-singInButton.onclick = () => auth.signInWithPopup(provider)
+singInButton.onclick = () => {
+    try {
+        auth.signInWithPopup(provider)
+    } catch (error) {
+        console.log(error)
+    }
+}
 
-singOutButton.onclick = () => auth.singOut()
+singOutButton.onclick = () =>{
+    try {
+        auth.singOut()
+    } catch (error) {
+        console.log(error)
+    }
+    
+}
