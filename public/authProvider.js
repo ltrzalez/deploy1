@@ -6,7 +6,7 @@ const singInButton = document.getElementById('singInButton')
 const singOutButton = document.getElementById('singOutButton')
 const userDetails = document.getElementById('userDetails')
 
-const provider = firebase.auth.GoogleAuthProvider()
+const provider = new firebase.auth.GoogleAuthProvider()
 
 singInButton.onclick = () => {
     try {
