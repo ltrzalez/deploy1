@@ -1,2 +1,1 @@
-console.log('hola mundo')
-console.log(firebase)
+console.log('me gusta aprender. Y a vos?')
